@@ -1,49 +1,163 @@
 * {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: .16rem;
 }
 
-html,
-body {
-    width: 100%;
-    height: 100%;
+html, body, .box {
+  width: 100%;
+  height: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  font-size: 625%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul li, ol li {
+  list-style: none;
 }
 
 .wrap {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-header,
-footer {
-    width: 100%;
-    height: 50px;
-    background: blue;
+  width: 100%;
+  height: 100%;
 }
 
 header {
-    background: #fff;
-    border-bottom: 1px solid #000;
-}
-
-header ul {
-    width: 100%;
-}
-
-header ul li {
-    float: left;
-    line-height: 50px;
-    font-size: 20px;
-    margin: 0 12px;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  font-weight: normal;
 }
 
 section {
-    flex: 1;
-    width: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+section > ul {
+  width: 150%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+section > ul > li {
+  color: 000;
+  flex: 1;
+}
+
+section > ul > li:nth-child(1) {
+  color: #00f;
+}
+
+section p {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide > dl {
+  flex: 1;
+  text-align: center;
+}
+
+.swiper-slide > dl > dd {
+  font-size: 12px;
+  text-align: center;
+}
+
+.swiper-slide > dl > dd > span {
+  text-align: center;
+  width: 100%;
+}
+
+.swiper-slide > dl > dd > b {
+  color: red;
+}
+
+.swiper-slide > dl > dd > u {
+  font-size: .12px;
+}
+
+nav > h3 {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.pin {
+  width: 100%;
+}
+
+.pin ol {
+  width: 100%;
+  display: flex;
+}
+
+.pin ol li {
+  flex: 1;
+}
+
+.pin ol li dl dd b {
+  color: red;
+}
+
+.pin ol li dl dd span {
+  padding: 1px;
+  border: 1px solid #000;
+}
+
+footer {
+  display: flex;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a {
+  flex: 1;
+  text-align: center;
+}
+
+footer a dl dt {
+  padding: 3px;
 }
